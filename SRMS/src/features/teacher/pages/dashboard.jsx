@@ -1,4 +1,4 @@
-// src/App.jsx
+ 
 import Logo from '../../../assets/logo.png'
 import teacher from '../../../assets/teacher.png';
 import React from 'react';
