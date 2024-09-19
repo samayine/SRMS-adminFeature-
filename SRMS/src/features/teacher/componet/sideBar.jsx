@@ -1,21 +1,21 @@
 import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom'; // useLocation to determine current route
+import { Link, useLocation } from 'react-router-dom';
 import Logo from '../../../assets/logo.png';
-import { FaHome, FaClipboard, FaCalendarAlt, FaClock, FaInfoCircle, FaChartBar } from 'react-icons/fa'; // Added FaChartBar for Performance icon
+import { FaHome, FaClipboard, FaCalendarAlt, FaClock, FaInfoCircle, FaChartBar } from 'react-icons/fa';
 
 function SideBar() {
-  const location = useLocation(); // To know the current path
-  const [activeItem, setActiveItem] = useState(location.pathname); // Initialize with the current route
+  const location = useLocation();
+  const [activeItem, setActiveItem] = useState(location.pathname);
 
   const handleItemClick = (item) => {
     setActiveItem(item);
   };
 
   return (
-    <aside className="w-1/5 bg-white border-r shadow-lg flex flex-col">
-      <div className="p-6 flex flex-col items-center">
+    <aside className="w-1/5 bg-white border-r shadow-lg flex flex-col p-6"> {/* Added p-6 for padding */}
+      <div className="flex flex-col items-center">
         {/* Logo and Logo Name Side by Side */}
-        <div className="flex items-center">
+        <div className="flex items-center mb-6"> {/* Added mb-6 for margin below */}
           <img 
             src={Logo}
             alt="Logo"
@@ -26,9 +26,9 @@ function SideBar() {
       </div>
 
       <nav className="flex flex-col flex-grow">
-        <ul className="space-y-4 p-6">
+        <ul className="space-y-4">
           <li
-            className={`flex items-center font-semibold cursor-pointer ${
+            className={`flex items-center font-semibold cursor-pointer p-3 rounded-lg ${
               activeItem === '/' ? 'bg-teal-500 text-white' : 'text-gray-600 hover:text-teal-500 hover:bg-gray-100'
             }`}
             onClick={() => handleItemClick('/')}
@@ -38,7 +38,7 @@ function SideBar() {
           </li>
 
           <li
-            className={`flex items-center cursor-pointer ${
+            className={`flex items-center cursor-pointer p-3 rounded-lg ${
               activeItem === '/inputgrade' ? 'bg-teal-500 text-white' : 'text-gray-600 hover:text-teal-500 hover:bg-gray-100'
             }`}
             onClick={() => handleItemClick('/inputgrade')}
@@ -48,7 +48,7 @@ function SideBar() {
           </li>
 
           <li
-            className={`flex items-center cursor-pointer ${
+            className={`flex items-center cursor-pointer p-3 rounded-lg ${
               activeItem === '/examschedule' ? 'bg-teal-500 text-white' : 'text-gray-600 hover:text-teal-500 hover:bg-gray-100'
             }`}
             onClick={() => handleItemClick('/examschedule')}
@@ -58,7 +58,7 @@ function SideBar() {
           </li>
 
           <li
-            className={`flex items-center cursor-pointer ${
+            className={`flex items-center cursor-pointer p-3 rounded-lg ${
               activeItem === '/myschedule' ? 'bg-teal-500 text-white' : 'text-gray-600 hover:text-teal-500 hover:bg-gray-100'
             }`}
             onClick={() => handleItemClick('/myschedule')}
@@ -67,9 +67,8 @@ function SideBar() {
             <Link to="/myschedule">My Schedule</Link>
           </li>
 
-          {/* Performance */}
           <li
-            className={`flex items-center cursor-pointer ${
+            className={`flex items-center cursor-pointer p-3 rounded-lg ${
               activeItem === '/performance' ? 'bg-teal-500 text-white' : 'text-gray-600 hover:text-teal-500 hover:bg-gray-100'
             }`}
             onClick={() => handleItemClick('/performance')}
@@ -79,7 +78,7 @@ function SideBar() {
           </li>
 
           <li
-            className={`flex items-center cursor-pointer ${
+            className={`flex items-center cursor-pointer p-3 rounded-lg ${
               activeItem === '/aboutus' ? 'bg-teal-500 text-white' : 'text-gray-600 hover:text-teal-500 hover:bg-gray-100'
             }`}
             onClick={() => handleItemClick('/about-us')}
