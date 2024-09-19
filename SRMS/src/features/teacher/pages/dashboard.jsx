@@ -2,57 +2,19 @@
 import Logo from '../../../assets/logo.png'
 import teacher from '../../../assets/teacher.png';
 import React from 'react';
-import { FaHome, FaClipboard, FaCalendarAlt, FaClock, FaInfoCircle, FaSearch } from 'react-icons/fa';
-
+import { FaSearch } from 'react-icons/fa';
+import SideBar from '../componet/sideBar';
 const TeacherDashboard = () => {
-
+  console.log("Dashboard component loaded");
   const courses = {
     "courseone": "Physics",
     "coursetwo": "Chemistry"
   };
 
+
   return (
     <div className="flex h-screen">
-      {/* Sidebar */}
-      <aside className="w-1/5 bg-white border-r shadow-lg flex flex-col">
-        <div className="p-6 flex flex-col items-center">
-          {/* Logo and Logo Name Side by Side */}
-          <div className="flex items-center">
-            <img 
-              src={Logo}
-              alt="Logo"
-              className="w-10 h-10 object-cover"
-            />
-            <h1 className="text-custom-blue font-bold text-2xl ml-3">SRMS</h1>
-          </div>
-        </div>
-
-        <nav className="flex flex-col flex-grow">
-          <ul className="space-y-4 p-6">
-            <li className="flex items-center text-purple-600 font-semibold">
-              <FaHome className="mr-3" />
-              Dashboard
-            </li>
-            <li className="flex items-center text-gray-600 hover:text-purple-600">
-              <FaClipboard className="mr-3" />
-              Input Grade
-            </li>
-            <li className="flex items-center text-gray-600 hover:text-purple-600">
-              <FaCalendarAlt className="mr-3" />
-              Exam Schedule
-            </li>
-            <li className="flex items-center text-gray-600 hover:text-purple-600">
-              <FaClock className="mr-3" />
-              Period Schedule
-            </li>
-            <li className="flex items-center text-gray-600 hover:text-purple-600">
-              <FaInfoCircle className="mr-3" />
-              About Us
-            </li>
-          </ul>
-        </nav>
-      </aside>
-
+      {/* <SideBar/> */}
       {/* Main Content */}
       <div className="flex-1 bg-gray-100 p-6">
         {/* Header */}
