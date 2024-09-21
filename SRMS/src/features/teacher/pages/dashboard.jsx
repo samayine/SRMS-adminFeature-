@@ -5,7 +5,7 @@ import React from 'react';
 import { FaSearch } from 'react-icons/fa';
 import SideBar from '../componet/sideBar';
 const TeacherDashboard = () => {
-  console.log("Dashboard component loaded");
+  
   const courses = {
     "courseone": "Physics",
     "coursetwo": "Chemistry"
@@ -71,7 +71,7 @@ const TeacherDashboard = () => {
 
           <div className="bg-gray-200 p-6 rounded-lg flex-1">
             <p className="text-gray-600">Subject: {courses.courseone}</p>
-            <p className="text-gray-600">ID: 8495</p>
+            {/* <p className="text-gray-600">ID: 8495</p> */}
           </div>
         </section>
       </div>
