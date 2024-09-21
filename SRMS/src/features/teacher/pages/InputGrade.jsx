@@ -35,11 +35,10 @@ const InputGrade = () => {
       setNotification('Grades successfully submitted!');
     }
   };
-// const user = {role: "student"}
-//   if(user.role == "admin"){
-    return (
-      <>
-      <div className='flex h-screen' >
+
+  return (
+    <>
+      <div className='flex h-screen'>
         {/* <SideBar/> */}
         {/* Main Content */}
         <div className="flex-1 bg-gray-100 p-6">
@@ -57,7 +56,7 @@ const InputGrade = () => {
               </div>
             </div>
           </header>
-  
+
           {/* Class and Section Selection */}
           <div className="bg-light-blue flex mb-4 p-6 rounded-lg items-center justify-between">
             <div className="flex space-x-4">
@@ -72,8 +71,13 @@ const InputGrade = () => {
                 <option value="A">A</option>
                 <option value="B">B</option>
               </select>
+              <select className="border border-gray-300 rounded-lg p-2">
+                <option value="">Select Semester</option>
+                <option value="1">Semester 1</option>
+                <option value="2">Semester 2</option>
+              </select>
             </div>
-  
+
             {/* Search Input */}
             <div className="relative flex items-center">
               <input
@@ -84,7 +88,7 @@ const InputGrade = () => {
               <FaSearch className="absolute right-3 text-gray-500" />
             </div>
           </div>
-  
+
           {/* Table */}
           <div className="bg-white rounded-lg shadow overflow-hidden mb-4">
             <table className="min-w-full table-auto">
@@ -147,7 +151,7 @@ const InputGrade = () => {
               </tbody>
             </table>
           </div>
-  
+
           {/* Post Button */}
           <div className="flex justify-end">
             <button
@@ -157,7 +161,7 @@ const InputGrade = () => {
               Post Grades
             </button>
           </div>
-  
+
           {/* Notification */}
           {notification && (
             <div className={`mt-4 p-2 text-center rounded ${notification.startsWith('Error') ? 'bg-red-200 text-red-600' : 'bg-green-200 text-green-600'}`}>
@@ -166,14 +170,8 @@ const InputGrade = () => {
           )}
         </div>
       </div>
-      </>
-      
-    );
-  // } else {
-  //   return "Not admin";
-  // }
-
-  
+    </>
+  );
 };
 
 export default InputGrade;

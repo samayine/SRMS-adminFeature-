@@ -83,7 +83,7 @@ function SideBar() {
             onClick={() => handleItemClick('/teacher/dashboard/about-us')}
           >
             <FaInfoCircle className="mr-3" />
-            <Link to="/teacher/dashboard/about-us">About Us</Link>
+            <Link to="/teacher/dashboard/aboutus">About Us</Link>
           </li>
         </ul>
       </nav>
